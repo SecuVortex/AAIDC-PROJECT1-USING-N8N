@@ -1,44 +1,73 @@
-# First RAG Agent Workflow
+# First RAG Agent Workflow 🚀
 
-## Overview
-This repository contains an n8n workflow that sets up a simple Retrieval-Augmented Generation (RAG) agent using Google Gemini API. By uploading company documents (PDF or CSV), you create a custom knowledge base that the AI can reference to answer your queries.
+---
 
-## Features
-- Upload PDF or CSV files as your knowledge base.
-- AI chat powered by Google Gemini PaLM API.
-- Vector-based semantic search using in-memory storage.
-- Easy setup using n8n automation platform.
+## Overview 🧠
+This repository contains an n8n workflow that creates a simple but powerful Retrieval-Augmented Generation (RAG) agent using Google Gemini API. Upload your company documents (PDF, CSV) as a knowledge base, and chat with an AI assistant that answers questions based on your custom data.
+
+---
+
+## Features ✨
+- 📄 Upload PDF or CSV files related to your business  
+- 🤖 AI-powered chat using Google Gemini PaLM API  
+- 🔍 Semantic search via in-memory vector embeddings  
+- ⚙️ Easy setup with zero coding required using n8n  
+
+---
+
+## Demo 🎥
+[![Watch the demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+
+*Replace `YOUTUBE_VIDEO_ID` with your actual YouTube video ID.*
+
+---
 
 ## Table of Contents
-- [Setup](#setup)
-- [Uploading Your Data](#uploading-your-data)
-- [Using the Chat Assistant](#using-the-chat-assistant)
-- [Limitations](#limitations)
-- [Contributing](#contributing)
-- [License](#license)
+- [Setup](#setup)  
+- [Uploading Your Data](#uploading-your-data)  
+- [Using the Chat Assistant](#using-the-chat-assistant)  
+- [Limitations](#limitations)  
+- [Contributing](#contributing)  
+- [License](#license)  
 
-## Setup
-1. Import the workflow JSON (`first-rag-agent.json`) into your n8n instance.
-2. Enter your Google Gemini API credentials in the credentials section ("Google GeminiPaLM API account").
-3. Activate the webhook URL from the "When chat message received" node to listen for chat messages.
+---
 
-## Uploading Your Data
-1. Execute the "Upload your file" node.
-2. Open the provided upload link in your browser.
-3. Upload your company data files (PDF or CSV).
-4. Files are converted into vector embeddings stored temporarily for semantic search.
+## Setup 🛠️
+1. Import the `first-rag-agent.json` workflow into your n8n instance.  
+2. Add your Google Gemini API credentials (`Google GeminiPaLM API account`).  
+3. Activate the webhook URL in the "When chat message received" node.
 
-## Using the Chat Assistant
-- Interact with the AI by sending messages to the chat webhook URL.
-- The AI will respond with answers based on your uploaded documents.
+---
 
-## Limitations
-- Vector store is in-memory; restarting n8n clears all uploaded data.
-- Suitable for test environments or small datasets.
-- File uploads limited to PDF and CSV formats.
+## Uploading Your Data 📤
+1. Execute the "Upload your file" node.  
+2. Open the provided URL in your browser.  
+3. Upload PDF or CSV files relevant to your company data.  
+4. The workflow converts them into vector embeddings stored temporarily for fast semantic search.
 
-## Contributing
-Contributions and improvements are welcome! Feel free to fork, submit issues, or open pull requests.
+---
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Using the Chat Assistant 💬
+- Send your questions to the chat node's webhook URL.  
+- The AI uses your uploaded data to provide accurate, context-aware answers.
+
+---
+
+## Limitations ⚠️
+- Vector store is memory-based — data will be lost after restart.  
+- Best for small datasets and experimentation.  
+- Supports only PDF and CSV upload formats.
+
+---
+
+## Contributing 🤝
+Enhancements and fixes are welcome! Fork the repo and submit pull requests.
+
+---
+
+## License 📄
+MIT License. See LICENSE file for details.
+
+---
+
+Thank you for checking out this project! Feel free to ⭐ the repo if you find it useful.
