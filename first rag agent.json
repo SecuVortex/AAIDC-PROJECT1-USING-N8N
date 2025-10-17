@@ -8,8 +8,8 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2,
       "position": [
-        -256,
-        272
+        -336,
+        208
       ],
       "id": "3d946095-f5d9-43c4-a38f-92a5850f7d89",
       "name": "AI Agent"
@@ -21,8 +21,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        -272,
-        496
+        -352,
+        432
       ],
       "id": "81a1dcd7-1dbc-48bc-9e94-2d2297182a87",
       "name": "Google Gemini Chat Model",
@@ -40,8 +40,8 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.3,
       "position": [
-        -544,
-        272
+        -624,
+        208
       ],
       "id": "ed93afe9-d242-4e23-9e72-1c74be992221",
       "name": "When chat message received",
@@ -59,8 +59,8 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
       "typeVersion": 1.3,
       "position": [
-        -304,
-        -256
+        -384,
+        -320
       ],
       "id": "d6c8fe65-81f1-48aa-9473-0de069b927c7",
       "name": "Simple Vector Store"
@@ -70,8 +70,8 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
       "typeVersion": 1,
       "position": [
-        -320,
-        -32
+        -400,
+        -96
       ],
       "id": "e037b5d6-3aa8-4759-bc50-af7184d882cc",
       "name": "Embeddings Google Gemini",
@@ -90,8 +90,8 @@
       "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
       "typeVersion": 1.1,
       "position": [
-        -160,
-        -48
+        -240,
+        -112
       ],
       "id": "d828ac52-bb8c-4e1c-aa93-1be2daf63552",
       "name": "Default Data Loader"
@@ -110,8 +110,8 @@
       "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
       "typeVersion": 1.2,
       "position": [
-        -256,
-        144
+        -336,
+        80
       ],
       "id": "d348a12a-4d64-4b62-8ae1-78d4c497be5a",
       "name": "Query Data Tool"
@@ -134,12 +134,38 @@
       "type": "n8n-nodes-base.formTrigger",
       "typeVersion": 2.2,
       "position": [
-        -512,
-        -272
+        -592,
+        -336
       ],
       "id": "ddc12cb4-d670-4d2c-aa7e-7d0b317650a4",
       "name": "Upload your file here",
       "webhookId": "82848bc4-5ea2-4e5a-8bb6-3c09b94a8c5d"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -240,
+        512
+      ],
+      "id": "bfefe54a-589a-48b4-8aad-177c031556ad",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "content": "# First RAG Agent Workflow\n\n---\n\n## Overview\nThis workflow sets up a simple Retrieval-Augmented Generation (RAG) agent using n8n and Google Gemini APIs. It allows uploading company documents (PDF or CSV) to create a custom knowledge base, and then chat with an AI that answers questions based on your uploaded data.\n\n\n\n## Setup\n- Enter your Google Gemini API credentials in the workflow to enable AI services.\n- Import the provided workflow JSON file into your n8n instance.\n- Activate the webhook URL from the \"When chat message received\" node.\n\n---\n\n## Uploading Data\n- Trigger the \"Upload your file\" node to get a link.\n- Open the link in a browser and upload your company documents (PDF or CSV formats).\n- The uploaded documents will be converted into embeddings and stored for semantic search.\n\n---\n\n## Using the Chat\n- Use the chat node webhook URL to send questions.\n- The AI will respond with answers informed by your uploaded documents.\n\n---\n\n## Notes\n- This RAG agent uses in-memory vector storage; uploaded data will not persist after workflow restarts.\n- Designed for testing and experimentation with retrieval-based generation.\n- Supported upload formats: PDF, CSV.\n\n---\n\nFeel free to customize this readme with your project-specific details or instructions.\n",
+        "height": 1008,
+        "width": 608
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1312,
+        -368
+      ],
+      "id": "6f3e8fac-7032-417c-8aea-0ca7fca87684",
+      "name": "Sticky Note"
     }
   ],
   "pinData": {},
@@ -218,6 +244,17 @@
     "AI Agent": {
       "main": [
         []
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
       ]
     }
   },
