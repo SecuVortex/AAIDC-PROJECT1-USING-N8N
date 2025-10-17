@@ -19,13 +19,9 @@ This repository contains an n8n workflow that creates a simple but powerful Retr
 
 Check out this awesome demo video showcasing how to create a simple RAG agent using n8n with a detachable knowledge base:  
 
-[![Watch the demo](https://img.youtube.com/vi/X-iej1SOwCY/0.jpg)](https://youtu.be/X-iej1SOwCY)
+[![Watch Demo](https://img.youtube.com/vi/X-iej1SOwCY/0.jpg)](https://youtu.be/X-iej1SOwCY)
 
 Click the image to watch the full walkthrough on YouTube and see the workflow in action!
-
-
-
-https://github.com/user-attachments/assets/904bc0f0-bcdf-4a85-840f-cffb692b588b
 
 
 
