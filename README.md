@@ -20,17 +20,7 @@ This repository contains an n8n workflow that creates a simple but powerful Retr
 
 *Replace `YOUTUBE_VIDEO_ID` with your actual YouTube video ID.*
 
----
 
-## Table of Contents
-- [Setup](#setup)  
-- [Uploading Your Data](#uploading-your-data)  
-- [Using the Chat Assistant](#using-the-chat-assistant)  
-- [Limitations](#limitations)  
-- [Contributing](#contributing)  
-- [License](#license)  
-
----
 
 ## Setup 🛠️
 1. Import the `first-rag-agent.json` workflow into your n8n instance.  
