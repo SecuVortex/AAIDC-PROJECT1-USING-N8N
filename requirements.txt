@@ -1,0 +1,23 @@
+# n8n RAG Agent Dependencies
+# Core n8n installation
+n8n>=1.0.0
+
+# Required n8n community packages for RAG functionality
+@n8n/n8n-nodes-langchain>=1.0.0
+
+# Google Gemini API dependencies (handled by n8n langchain nodes)
+# Note: API credentials must be configured in n8n interface
+
+# Additional dependencies for document processing
+# These are handled by n8n's built-in document loaders:
+# - PDF processing
+# - CSV processing
+# - Vector embeddings
+# - Memory management
+
+# Installation Instructions:
+# 1. Install n8n: npm install -g n8n
+# 2. Install langchain nodes: npm install @n8n/n8n-nodes-langchain
+# 3. Start n8n: n8n start
+# 4. Import the workflow JSON file
+# 5. Configure Google Gemini API credentials
